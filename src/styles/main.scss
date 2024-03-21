@@ -1,3 +1,36 @@
-body {
-  margin: 0;
+@import "./utils/extends";
+@import "./utils/mixins";
+@import "./utils/vars";
+@import "./blocks/header";
+@import "./blocks/menu";
+@import "./blocks/nav-menu";
+@import "./blocks/section";
+@import "./blocks/recommended";
+@import "./blocks/products";
+@import "./blocks/grid_gallery";
+@import "./blocks/buy-direct";
+@import "./blocks/form";
+@import "./blocks/contact";
+@import "./blocks/button";
+@import "./blocks/footer";
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: $general-color;
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
 }

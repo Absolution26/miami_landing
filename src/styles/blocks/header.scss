@@ -1,0 +1,80 @@
+.header {
+  @include on-tablets {
+    padding: 52px 120px 40px 124px;
+    background-image: url(../images/header_744.png);
+  }
+
+  @include on-desktop {
+    background-image: url(../images/header_1024.png);
+    background-position: center;
+  }
+
+  @extend %flex-column;
+
+  justify-content: space-between;
+  height: 100vh;
+  padding: 40px 24px 94px 20px;
+  background-image: url(../images/header_320.png);
+  background-position: top;
+  background-size: cover;
+
+  &__container {
+    @extend %flex-column;
+
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    margin: 0;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+
+    @include on-tablets {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    @include on-desktop {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    &::before {
+      content: " ";
+      position: relative;
+      bottom: 16px;
+      display: block;
+      width: 32px;
+      height: 27px;
+      background-image: url(../images/title_before.svg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include on-tablets {
+        width: 63px;
+        height: 76px;
+        background-image: url(../images/sound_waves_avescreen.svg);
+        bottom: 40px;
+      }
+
+      @include on-desktop {
+        bottom: 32px;
+      }
+    }
+  }
+}
+
+.logo__image {
+  @include on-tablets {
+    width: 190px;
+  }
+}
+
+.top-actions {
+  @extend %flex-space-between;
+}

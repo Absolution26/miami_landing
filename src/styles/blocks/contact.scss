@@ -1,0 +1,40 @@
+.contact {
+  &__form {
+    margin: 0 0 48px;
+
+    @include on-tablets {
+      margin: 0 24px 0 0;
+    }
+
+    @include on-desktop {
+      margin: 0 200px 0 0;
+    }
+  }
+
+  &__content {
+    @extend %flex-column;
+
+    @include on-tablets {
+      flex-direction: row;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9fadc2;
+  }
+
+  &__value {
+    display: inline-block;
+    margin-bottom: 24px;
+    line-height: 22px;
+    text-decoration: none;
+    color: $general-color;
+
+    &:hover {
+      color: $color-text-hover;
+    }
+  }
+}
